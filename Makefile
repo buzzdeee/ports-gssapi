@@ -1,6 +1,6 @@
-# $OpenBSD: Makefile,v 1.17 2014/01/15 02:13:58 jeremy Exp $
+# $OpenBSD$
 
-COMMENT =	ffi wrapper around GSSAPI
+COMMENT =	ffi wrapper around the system GSSAPI library
 
 DISTNAME =	gssapi-1.2.0
 CATEGORIES =	devel
@@ -15,7 +15,7 @@ PERMIT_PACKAGE_CDROM =	Yes
 MODULES =	lang/ruby
 
 BUILD_DEPENDS = ${RUN_DEPENDS}
-RUN_DEPENDS =	devel/ruby-ffi,${MODRUBY_FLAVOR}
+RUN_DEPENDS =	devel/ruby-ffi,${MODRUBY_FLAVOR}>=1.0.1
 
 CONFIGURE_STYLE = ruby gem
 
